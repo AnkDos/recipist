@@ -1,0 +1,35 @@
+<html>
+<head></head>
+<body>
+
+<center> <h1><u>THE ReciPiest</h1></u></center>
+<br>
+<form method="post" action="/req">
+Enter Ingredient
+<br>
+<input type="text" name="ing"> </input>
+<button type="submit" name="button"> Click</button>
+
+</form>
+
+<% if @resp==true%>
+<center>
+<table>
+<% i=0 %>
+<% while i<@count %>  
+<tr>
+    <td>
+      <%= @ar[i] %>
+    <br>
+      <img src=<%=@im[i]%>> </img>
+      <br>
+      </td>
+  </tr>
+  <% i+=1%>
+<% end %>
+</table>
+<%end%>
+</center>
+
+</body>
+</html>
